@@ -23,3 +23,11 @@ function randomFraction() {
 }
 
 console.log(randomFraction());
+
+// Math.random with whole numbers
+function randomWholeNum() {
+  let mathRandom = Math.random() * 10;
+  return Math.round(mathRandom);
+}
+
+console.log(randomWholeNum());
