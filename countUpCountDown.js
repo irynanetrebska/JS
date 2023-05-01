@@ -39,3 +39,21 @@ function rangeOfNumbers(startNum, endNum) {
 }
 
 console.log(rangeOfNumbers(6, 9));
+
+// another solution
+function rangeOfNumbers(startNum, endNum) {
+  if (endNum < startNum) {
+    return [];
+  } else {
+    const numbers = rangeOfNumbers(startNum, endNum - 1);
+    numbers.push(endNum);
+    return numbers;
+  }
+}
+
+// yet another solution
+function rangeOfNumbers(startNum, endNum) {
+  return endNum < startNum
+    ? []
+    : rangeOfNumbers(startNum, endNum - 1).concat(endNum);
+}
