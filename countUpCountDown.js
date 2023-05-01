@@ -11,11 +11,11 @@ function countup(n) {
 console.log(countup(5));
 
 // Count Down
-function countup(n) {
+function countdown(n) {
   if (n < 1) {
     return [];
   } else {
-    const countArray = countup(n - 1);
+    const countArray = countdown(n - 1);
     countArray.unshift(n);
     return countArray;
   }
